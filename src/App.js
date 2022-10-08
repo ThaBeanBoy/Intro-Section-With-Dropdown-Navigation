@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <>
+      Features Company Careers About Login Register Make remote work Get your
+      team in sync, no matter your location. Streamline processes, create team
+      rituals, and watch productivity soar. Learn more
+      <div class='attribution'>
+        Challenge by{' '}
+        <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>
+          Frontend Mentor
         </a>
-      </header>
-    </div>
+        . Coded by <a href='#'>Your Name Here</a>.
+      </div>
+    </>
   );
 }
 
