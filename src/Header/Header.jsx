@@ -3,8 +3,10 @@ import { useState } from 'react';
 import './Header.scss';
 
 import logo from '../images/logo.svg';
+import burgerIcon from '../images/icon-menu.svg';
 
 import arrowDown from '../images/icon-arrow-down.svg';
+import arrowUp from '../images/icon-arrow-up.svg';
 
 import iconToDo from '../images/icon-todo.svg';
 import calendar from '../images/icon-calendar.svg';
@@ -24,25 +26,33 @@ const NavElement = ({ name, subNavs }) => {
     >
       <div className='top'>
         <span className='nav-element-name'>{name}</span>
-        {subNavsAvailable ? <img src={arrowDown} alt='arrow down' /> : <></>}
+        {subNavsAvailable ? (
+          <img src={showSubNav ? arrowUp : arrowDown} alt='arrow down' />
+        ) : (
+          <></>
+        )}
       </div>
+
       {subNavsAvailable && showSubNav ? (
-        <ul
-          className='sub-navs'
-          onMouseEnter={() => setShowSubNav(true)}
-          onMouseLeave={() => setShowSubNav(false)}
-        >
-          {subNavs.map(({ name, imgPath, imgAlt }) => (
-            <li>
-              {imgPath !== undefined ? (
-                <img src={imgPath} alt={imgAlt} />
-              ) : (
-                <></>
-              )}
-              <span className='sub-nav-name'>{name}</span>
-            </li>
-          ))}
-        </ul>
+        <>
+          <div className='dummy-padding' />
+          <ul
+            className='sub-navs'
+            onMouseEnter={() => setShowSubNav(true)}
+            onMouseLeave={() => setShowSubNav(false)}
+          >
+            {subNavs.map(({ name, imgPath, imgAlt }) => (
+              <li>
+                {imgPath !== undefined ? (
+                  <img src={imgPath} alt={imgAlt} />
+                ) : (
+                  <></>
+                )}
+                <span className='sub-nav-name'>{name}</span>
+              </li>
+            ))}
+          </ul>
+        </>
       ) : (
         <></>
       )}
@@ -96,6 +106,8 @@ const Header = () => {
         <NavElement name='Login' />
         <NavElement name='Register' />
       </div>
+
+      <img id='moblile-menu-opener' src={burgerIcon} alt='close button' />
     </header>
   );
 };

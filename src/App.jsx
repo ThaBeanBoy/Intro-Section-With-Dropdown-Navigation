@@ -1,13 +1,13 @@
 import './App.scss';
 import Header from './Header/Header';
+import Landing from './Landing/Landing';
 
 function App() {
   return (
-    <>
-      {/* Features Company Careers About Login Register Make remote work Get your
-      team in sync, no matter your location. Streamline processes, create team
-      rituals, and watch productivity soar. Learn more */}
+    <div className='App'>
       <Header />
+
+      <Landing />
 
       <div className='attribution'>
         Challenge by{' '}
@@ -24,7 +24,7 @@ function App() {
         </a>
         .
       </div>
-    </>
+    </div>
   );
 }
 

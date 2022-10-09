@@ -30,10 +30,6 @@ header {
       }
     }
 
-    .dummy-padding {
-      height: 24px;
-    }
-
     ul {
       $ul-padding: 24px;
       padding: 24px;
@@ -83,14 +79,28 @@ header {
     align-items: center;
 
     .nav-element:last-child {
+      @include buttonProperties;
       margin-left: 40px;
-      border: solid 2px $Col-Medium-Gray;
-      padding: 12px 24px;
-      border-radius: 16px;
+    }
+  }
 
-      &:hover {
-        border-color: $Col-Almost-Black;
-      }
+  #moblile-menu-opener {
+    display: none;
+  }
+}
+
+header {
+  @media only screen and (max-width: 880px) {
+    padding: 24px 16px;
+
+    #moblile-menu-opener {
+      display: block;
+      cursor: pointer;
+    }
+
+    .left nav,
+    .user-entry {
+      display: none;
     }
   }
 }

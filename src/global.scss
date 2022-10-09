@@ -7,3 +7,16 @@ $Col-Almost-Black: hsl(0, 0%, 8%);
 $transition-time: 0.5s;
 
 $font: 'Epilogue', sans-serif;
+
+@mixin buttonProperties {
+  border: solid 2px $Col-Medium-Gray;
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-family: $font;
+  font-size: 18px;
+  background-color: $Col-Almost-White;
+
+  &:hover {
+    border-color: $Col-Almost-Black;
+  }
+}
