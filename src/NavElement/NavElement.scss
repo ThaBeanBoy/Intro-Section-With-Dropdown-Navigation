@@ -47,4 +47,16 @@
       }
     }
   }
+
+  &.mobile ul {
+    position: static;
+    margin-top: 32px;
+    padding: 0px 0px 0px 24px;
+
+    box-shadow: none;
+
+    li {
+      padding-bottom: 0px;
+    }
+  }
 }

@@ -20,7 +20,16 @@ const NavElement = ({ name, subNavs, mobileView }) => {
       onMouseEnter={() => (!mobileView ? setShowSubNav(true) : {})}
       onMouseLeave={() => (!mobileView ? setShowSubNav(false) : {})}
     >
-      <div className='top'>
+      <div
+        className='top'
+        onClick={() =>
+          mobileView
+            ? showSubNav
+              ? setShowSubNav(false)
+              : setShowSubNav(true)
+            : {}
+        }
+      >
         <span className='nav-element-name'>{name}</span>
         {subNavsAvailable ? (
           <img src={showSubNav ? arrowUp : arrowDown} alt='arrow down' />
@@ -34,8 +43,8 @@ const NavElement = ({ name, subNavs, mobileView }) => {
           <div className='dummy-padding' />
           <ul
             className='sub-navs'
-            onMouseEnter={() => setShowSubNav(true)}
-            onMouseLeave={() => setShowSubNav(false)}
+            onMouseEnter={() => (!mobileView ? setShowSubNav(true) : {})}
+            onMouseLeave={() => (!mobileView ? setShowSubNav(false) : {})}
           >
             {subNavs.map(({ name, imgPath, imgAlt }) => (
               <li>

@@ -1,16 +1,23 @@
+import { useState } from 'react';
 import './App.scss';
 import Header from './Header/Header';
 import Landing from './Landing/Landing';
 import MobileMenu from './MobileMenu/MobileMenu';
 
 function App() {
+  const [showMobileNav, setShowMobileNav] = useState(false);
+
   return (
     <div className='App'>
-      <Header />
+      <Header burgerClick={() => setShowMobileNav(true)} />
 
       <Landing />
 
-      <MobileMenu />
+      {showMobileNav ? (
+        <MobileMenu closeBtnClick={() => setShowMobileNav(false)} />
+      ) : (
+        <></>
+      )}
 
       <div className='attribution'>
         Challenge by{' '}

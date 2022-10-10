@@ -1,6 +1,7 @@
 @import '../global.scss';
 
 .mobile-menu {
+  //   display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -18,7 +19,7 @@
     width: 240px;
     background-color: $Col-Almost-White;
 
-    .top {
+    .menu-top {
       width: 100%;
       padding: 24px 16px;
       display: flex;
@@ -35,7 +36,15 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding-left: 24px;
+      padding: 16px 0px 0px 24px;
+
+      .nav-element {
+        margin-bottom: 32px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
     }
   }
 }

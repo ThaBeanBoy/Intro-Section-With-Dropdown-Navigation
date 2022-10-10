@@ -10,7 +10,7 @@ import calendar from '../images/icon-calendar.svg';
 import reminders from '../images/icon-reminders.svg';
 import planning from '../images/icon-planning.svg';
 
-const Header = () => {
+const Header = ({ burgerClick }) => {
   const featuresSubNavs = [
     {
       name: 'To Do List',
@@ -57,7 +57,12 @@ const Header = () => {
         <NavElement name='Register' />
       </div>
 
-      <img id='moblile-menu-opener' src={burgerIcon} alt='close button' />
+      <img
+        id='moblile-menu-opener'
+        src={burgerIcon}
+        alt='close button'
+        onClick={() => burgerClick()}
+      />
     </header>
   );
 };
