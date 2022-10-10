@@ -1,0 +1,50 @@
+@import '../global.scss';
+
+.nav-element {
+  cursor: pointer;
+
+  position: static;
+  color: $Col-Medium-Gray;
+
+  .top {
+    display: flex;
+    align-items: center;
+
+    .nav-element-name {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      color: $Col-Almost-Black;
+      transition: $transition-time;
+    }
+  }
+
+  ul {
+    $ul-padding: 24px;
+    padding: 24px;
+    position: absolute;
+    list-style: none;
+    border-radius: 12px;
+    margin-top: 24px;
+
+    background-color: $Col-Almost-White;
+    box-shadow: 0 4px 32px $Col-Medium-Gray;
+
+    li {
+      transition: $transition-time;
+
+      &:not(&:last-child) {
+        padding-bottom: 14px;
+      }
+
+      img {
+        margin-right: 16px;
+      }
+
+      &:hover {
+        color: $Col-Almost-Black;
+      }
+    }
+  }
+}

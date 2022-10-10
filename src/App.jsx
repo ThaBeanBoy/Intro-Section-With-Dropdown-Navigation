@@ -1,6 +1,7 @@
 import './App.scss';
 import Header from './Header/Header';
 import Landing from './Landing/Landing';
+import MobileMenu from './MobileMenu/MobileMenu';
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <Header />
 
       <Landing />
+
+      <MobileMenu />
 
       <div className='attribution'>
         Challenge by{' '}
