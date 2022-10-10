@@ -9,12 +9,12 @@ function App() {
 
   return (
     <div className='App'>
-      <Header burgerClick={() => setShowMobileNav(true)} />
+      <Header setShowMobileNav={setShowMobileNav} />
 
       <Landing />
 
       {showMobileNav ? (
-        <MobileMenu closeBtnClick={() => setShowMobileNav(false)} />
+        <MobileMenu setShowMobileNav={setShowMobileNav} />
       ) : (
         <></>
       )}

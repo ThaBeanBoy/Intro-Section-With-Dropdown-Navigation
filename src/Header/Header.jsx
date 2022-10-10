@@ -10,7 +10,7 @@ import calendar from '../images/icon-calendar.svg';
 import reminders from '../images/icon-reminders.svg';
 import planning from '../images/icon-planning.svg';
 
-const Header = ({ burgerClick }) => {
+const Header = ({ setShowMobileNav }) => {
   const featuresSubNavs = [
     {
       name: 'To Do List',
@@ -61,7 +61,7 @@ const Header = ({ burgerClick }) => {
         id='moblile-menu-opener'
         src={burgerIcon}
         alt='close button'
-        onClick={() => burgerClick()}
+        onClick={() => setShowMobileNav(true)}
       />
     </header>
   );

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 import './NavElement.scss';
 
@@ -10,6 +11,11 @@ const NavElement = ({ name, subNavs, mobileView }) => {
   mobileView = mobileView !== undefined ? mobileView : false;
 
   const [showSubNav, setShowSubNav] = useState(false);
+  const animationProps = {
+    height: showSubNav ? 'auto' : 0,
+    paddingTop: showSubNav ? 24 : 0,
+    paddingBottom: showSubNav ? 24 : 0,
+  };
 
   const subNavsAvailable = subNavs !== undefined && subNavs.length >= 1;
 
@@ -38,11 +44,12 @@ const NavElement = ({ name, subNavs, mobileView }) => {
         )}
       </div>
 
-      {subNavsAvailable && showSubNav ? (
+      {subNavsAvailable /* && showSubNav */ ? (
         <>
           <div className='dummy-padding' />
-          <ul
-            className='sub-navs'
+          <motion.ul
+            animate={{ ...animationProps }}
+            transition={{ type: 'just', duration: 0.5 }}
             onMouseEnter={() => (!mobileView ? setShowSubNav(true) : {})}
             onMouseLeave={() => (!mobileView ? setShowSubNav(false) : {})}
           >
@@ -56,7 +63,7 @@ const NavElement = ({ name, subNavs, mobileView }) => {
                 <span className='sub-nav-name'>{name}</span>
               </li>
             ))}
-          </ul>
+          </motion.ul>
         </>
       ) : (
         <></>

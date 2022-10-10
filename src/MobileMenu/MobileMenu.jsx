@@ -9,7 +9,7 @@ import calendar from '../images/icon-calendar.svg';
 import reminders from '../images/icon-reminders.svg';
 import planning from '../images/icon-planning.svg';
 
-const MobileMenu = ({ closeBtnClick }) => {
+const MobileMenu = ({ setShowMobileNav }) => {
   const featuresSubNavs = [
     {
       name: 'To Do List',
@@ -46,7 +46,7 @@ const MobileMenu = ({ closeBtnClick }) => {
           <img
             src={closeBtm}
             alt='menu close icon'
-            onClick={() => closeBtnClick()}
+            onClick={() => setShowMobileNav(false)}
           />
         </div>
         <nav>
