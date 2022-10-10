@@ -15,6 +15,7 @@ const NavElement = ({ name, subNavs, mobileView }) => {
     height: showSubNav ? 'auto' : 0,
     paddingTop: showSubNav ? 24 : 0,
     paddingBottom: showSubNav ? 24 : 0,
+    marginTop: showSubNav ? 24 : 0,
   };
 
   const subNavsAvailable = subNavs !== undefined && subNavs.length >= 1;
