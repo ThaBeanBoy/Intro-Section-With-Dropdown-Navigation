@@ -13,11 +13,18 @@ function App() {
 
       <Landing />
 
-      {showMobileNav ? (
-        <MobileMenu setShowMobileNav={setShowMobileNav} />
+      <MobileMenu
+        setShowMobileNav={setShowMobileNav}
+        isShowing={showMobileNav}
+      />
+      {/* {showMobileNav ? (
+        <MobileMenu
+          setShowMobileNav={setShowMobileNav}
+          isShowing={showMobileNav}
+        />
       ) : (
         <></>
-      )}
+      )} */}
 
       <div className='attribution'>
         Challenge by{' '}

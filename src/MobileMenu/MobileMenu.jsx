@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import './MobileMenu.scss';
 
 import NavElement from '../NavElement/NavElement';
@@ -9,39 +11,43 @@ import calendar from '../images/icon-calendar.svg';
 import reminders from '../images/icon-reminders.svg';
 import planning from '../images/icon-planning.svg';
 
-const MobileMenu = ({ setShowMobileNav }) => {
-  const featuresSubNavs = [
-    {
-      name: 'To Do List',
-      imgPath: iconToDo,
-      imgAlt: 'todo icon',
-    },
-    {
-      name: 'Calendar',
-      imgPath: calendar,
-      imgAlt: 'calendar icon',
-    },
-    {
-      name: 'Reminders',
-      imgPath: reminders,
-      imgAlt: 'reminders icon',
-    },
-    {
-      name: 'Planning',
-      imgPath: planning,
-      imgAlt: 'planning icon',
-    },
-  ];
+const featuresSubNavs = [
+  {
+    name: 'To Do List',
+    imgPath: iconToDo,
+    imgAlt: 'todo icon',
+  },
+  {
+    name: 'Calendar',
+    imgPath: calendar,
+    imgAlt: 'calendar icon',
+  },
+  {
+    name: 'Reminders',
+    imgPath: reminders,
+    imgAlt: 'reminders icon',
+  },
+  {
+    name: 'Planning',
+    imgPath: planning,
+    imgAlt: 'planning icon',
+  },
+];
 
-  const companySubNavs = [
-    { name: 'History' },
-    { name: 'Our Team' },
-    { name: 'Blog' },
-  ];
+const companySubNavs = [
+  { name: 'History' },
+  { name: 'Our Team' },
+  { name: 'Blog' },
+];
 
+const MobileMenu = ({ setShowMobileNav, isShowing }) => {
   return (
-    <div className='mobile-menu'>
-      <div className='menu'>
+    <motion.div
+      className='mobile-menu'
+      animate={{ width: isShowing ? '100vw' : 0 }}
+      transition={{ type: 'just', duration: 0.5 }}
+    >
+      <motion.div className='menu'>
         <div className='menu-top'>
           <img
             src={closeBtm}
@@ -64,8 +70,8 @@ const MobileMenu = ({ setShowMobileNav }) => {
           <NavElement name='Careers' />
           <NavElement name='About' />
         </nav>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

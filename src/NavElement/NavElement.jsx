@@ -45,7 +45,7 @@ const NavElement = ({ name, subNavs, mobileView }) => {
         )}
       </div>
 
-      {subNavsAvailable /* && showSubNav */ ? (
+      {subNavsAvailable ? (
         <>
           <div className='dummy-padding' />
           <motion.ul

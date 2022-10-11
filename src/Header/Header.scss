@@ -5,6 +5,10 @@ header {
   width: 100%;
   max-width: 1440px;
   padding: 42px 24px;
+  position: sticky;
+  top: 0;
+  // background-color: $Col-Almost-White;
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
   display: flex;
   align-items: center;
