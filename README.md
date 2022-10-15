@@ -94,9 +94,9 @@ Since using React Js, I have had a sudden urge to work with react in every proje
 
 ### Useful resources
 
-- [React Js](https://reactjs.org/) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Framer Motion](https://www.framer.com/motion/) -
-- [Scss](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [React Js](https://reactjs.org/) - This framework really impressed when I was making the nav. Had I used HTML CSS & JS, it would've taken some time just to achieve what I did in under 2 hours with React Js.
+- [Framer Motion](https://www.framer.com/motion/) - This was an amazing animation library. Although I could've animated using css class, I have a feeling I could achive more complex animation using React & this library.
+- [Scss](https://www.example.com) - This has always been my conerstone when it comes to styling. It just makes styling sites & component more enjoyable.
 
 ## Author
 
