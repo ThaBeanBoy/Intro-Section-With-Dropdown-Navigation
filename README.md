@@ -1,93 +1,110 @@
-# Frontend Mentor - Intro section with dropdown navigation
+# Frontend Mentor - Intro section with dropdown navigation solution
 
-![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Frontend Mentor - Intro section with dropdown navigation solution](#frontend-mentor---intro-section-with-dropdown-navigation-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshots](#screenshots)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this intro section with dropdown navigation and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
 - View the optimal layout for the content depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshots
 
-## Where to find everything
+![](./screenshot.png)
+![](./screenshot-mobile.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- [Repo](https://github.com/ThaBeanBoy/Intro-Section-With-Dropdown-Navigation)
+- [Live Site](https://intro-section-with-dropdown-navigation-self.vercel.app/)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Semantic HTML5 markup
+- React Js
+- [Scss](https://sass-lang.com/)
+- Flexbox
+- Desktop-first workflow
+- [React Js](https://reactjs.org/)
+- [Framer Motion](https://www.framer.com/motion/)
 
-## Building your project
+### What I learned
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+This is the first project where I could use react js. It was a really enjoyable process. During this project, I really could explore an idea that I've had for some time, making individaul components responsive instead of focusing on the whole page itself.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+A big benefit to using React Js was that through the use of components, & hooks, making nav elements was super easy. I could encapsulate all the logic & functionality within that component. It would handle how it would function & function based on the props provided.
 
-## Deploying your project
+```jsx
+<nav>
+  <NavElement name='Features' subNavs={featuresSubNavs} />
+  <NavElement name='Company' subNavs={companySubNavs} />
+  <NavElement name='Careers' />
+  <NavElement name='About' />
+</nav>
+```
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+It was my first time exploring animation libraries for react. I used [Framer Motion](https://www.framer.com/motion/) to do the job. So far I'm able to do simple animations with it, but I don't think it should be too different from animating using css. Here's an example of an animation.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+```jsx
+const [showSubNav, setShowSubNav] = useState(false);
+const animationProps = {
+  height: showSubNav ? 'auto' : 0,
+  paddingTop: showSubNav ? 24 : 0,
+  paddingBottom: showSubNav ? 24 : 0,
+  marginTop: showSubNav ? 24 : 0,
+};
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+// In return of a react functional component
+<motion.ul
+  animate={{ ...animationProps }}
+  transition={{ type: 'just', duration: 0.5 }}
+  onMouseEnter={() => (!mobileView ? setShowSubNav(true) : {})}
+  onMouseLeave={() => (!mobileView ? setShowSubNav(false) : {})}
+>
+```
 
-## Create a custom `README.md`
+### Continued development
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+Since using React Js, I have had a sudden urge to work with react in every project. There are a couple of things I'd love to learn though.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+- [Gatsby](https://www.gatsbyjs.com/) - The one drawback to using React Js is that it is not SEO friendly. Luckily I can still continue with React, & use Gatsby as a SSG(Static Site Generator).
+- [Framer Motion](https://www.framer.com/motion/) - I'd love to improve upon my animation skills. It's the subtle animations that can make a site feel & look professional. I also believe that it can make a site feel alive.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+### Useful resources
 
-## Submitting your solution
+- [React Js](https://reactjs.org/) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Framer Motion](https://www.framer.com/motion/) -
+- [Scss](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+## Author
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+- GitHub - [@ThaBeanBoy](https://github.com/ThaBeanBoy)
+- Frontend Mentor - [@ThaBeanBoy](https://www.frontendmentor.io/profile/ThaBeanBoy)
+- Twitter - [@HeizenburgM](https://twitter.com/HeizenburgM)
+- Instagram - [tiin_giib_chiip](https://www.instagram.com/tiin_giib_chiip/)
 
-## Sharing your solution
+## Acknowledgments
 
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+I'd like to give a big shout out to [The Net Ninja](https://www.youtube.com/c/TheNetNinja), His playlists kick started my love for react & inspired the use of [Framer Motion](https://www.framer.com/motion/).
