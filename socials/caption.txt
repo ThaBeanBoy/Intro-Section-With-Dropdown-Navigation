@@ -1,6 +1,6 @@
-Live Site - shorturl.at/hklZ7
+Live Site - https://intro-section-with-dropdown-navigation-self.vercel.app/
 
-Repo - shorturl.at/cfghr
+Repo - https://github.com/ThaBeanBoy/Intro-Section-With-Dropdown-Navigation
 
 Front End Mentor - https://www.frontendmentor.io/home
 
