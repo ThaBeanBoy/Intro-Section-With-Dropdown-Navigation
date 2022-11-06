@@ -1,0 +1,30 @@
+Live Site - shorturl.at/hklZ7
+
+Repo - shorturl.at/cfghr
+
+Front End Mentor - https://www.frontendmentor.io/home
+
+Challenge - https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da
+
+Framer Motion - https://www.framer.com/motion/ 
+
+Linkedin - https://www.linkedin.com/in/gibbs-chipoyera-0948b9193/
+
+Instagram - https://www.instagram.com/tiin_giib_chiip/
+
+The only challenging thing about this project was making the site responsive. I think that might be my weakness when it comes to front-end web development. One thing I want to learn is HTML landmark tags. All I know is that it aids in accessibility, but I'm not sure about SEO.
+
+I hope I didn't break the design from widths 933-1260px, The site looked weird, so I adjusted the positioning of the cards to give additional space to the form and thank you status.
+
+My biggest curiosity throughout this project is how exactly do websites & applications process payments? do they use some sort of api, does the api support multiple regions? How would this be handled on the back-end? I've been wondering for some time now.
+
+Thanks for checking this out.
+
+#fontawesome
+#googlefonts
+#webdeveloper - #webdevelopment - #webdev
+#webdesign
+ - #uidesign
+- #design - #ui
+#figma
+
